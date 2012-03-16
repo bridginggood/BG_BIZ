@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SplashController!</string>
+    <string name="app_name">BridgingGood for Business</string>
+    
+    <string name="SplashController_splash_description">BridgingGood Splash Screen</string>
+    <string name="MainController_loading_qr_reader">Loading QR Code Reader</string>
+    <string name="QRCodeReader_qrscanner_help_message">Place a QR code inside the viewfinder rectangle to scan it.</string>
+
+</resources>

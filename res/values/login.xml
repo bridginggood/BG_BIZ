@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Used in LoginController 
+ -->
+<resources>
+    <string name="lblBizId">Business ID</string>
+    <string name="lblBizPassword">Password</string>
+    <string name="btnLogin">Login</string>
+    <string name="txtBizIdHint">Enter Business Id</string>
+    <string name="lblRememberLogin">Stay signed in</string>
+    
+</resources>
