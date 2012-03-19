@@ -1,31 +1,72 @@
 package com.bridginggoodbiz;
 
+import com.bridginggoodbiz.DB.LoginJSON;
+
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
+import android.util.Log;
 
 public class SplashController extends Activity{
-
-	private static final int DELAY_MILLS = 3000;
-
-	/** Called when the activity is first created. */
+	private ProgressDialog mProgressDialog;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash_layout);
 
-		Handler handlerLoading = new Handler();
-
-		handlerLoading.postDelayed(new Runnable() {
-			
+		mProgressDialog = ProgressDialog.show(this, "", "Loading... Please wait", true, false);
+		Business.init();
+		
+		Thread splashTread = new Thread() {
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
-				Intent mainController = new Intent(SplashController.this, MainController.class);
-				SplashController.this.startActivity(mainController);
-				SplashController.this.finish();
+				long startTime = android.os.SystemClock.uptimeMillis();
+
+				/*
+				 *===============START Loading Job==================== 
+				 */
+				BusinessStore.loadUserSession(getApplicationContext());
+				
+				//Check if saved user token exists or not
+				boolean isLoginSuccess = isBusinessAutoLoginSuccessful();
+				Log.d("BGB", "isBusinessAutoLogin:  "+isLoginSuccess);
+
+				// Decide where to redirect user depending on isLoginSuccess
+				Class<?> targetClass = isLoginSuccess? MainActivity.class:LoginActivity.class;
+
+				long durationTime = android.os.SystemClock.uptimeMillis() - startTime;
+				Log.d("BGB", "Login time taken: "+durationTime);
+				if (durationTime <=CONST.SPLASH_DELAY) {
+					try {
+						synchronized(this){
+							//Pause the application for remaining time to meet SPLASH_DELAY
+							wait(CONST.SPLASH_DELAY-durationTime);
+						}
+					} catch (Exception e) {
+						Log.d("BG", "spalashThread Exception: "+e.getLocalizedMessage());
+					}
+				}
+
+				/*
+				 *===============END Loading Job==================== 
+				 */
+
+				mProgressDialog.dismiss();
+				finish();
+				startActivity(new Intent().setClass(SplashController.this, targetClass));
 			}
-		}, DELAY_MILLS);
+		};
+		splashTread.start();
 	}
+
+	/**
+	 * Returns whether login attempt using stored credentials was successful or not.
+	 * @return True if login is success
+	 */
+	private boolean isBusinessAutoLoginSuccessful(){
+		LoginJSON.doLogin(Business.getBizName(), Business.getBizPassword());
+		return false;
+	}
+
 }

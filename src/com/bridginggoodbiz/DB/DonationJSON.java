@@ -9,32 +9,33 @@ package com.bridginggoodbiz.DB;
 
 import org.json.JSONObject;
 
+import com.bridginggoodbiz.CONST;
+
 import android.util.Log;
 
 public class DonationJSON {
 
-	private static final String PARAM_USER_ID = "UserId";
+	private static final String PARAM_QR_ID = "QrId";
 	private static final String PARAM_BIZ_ID = "BusinessId";
-	private static final String PARAM_DEVICE_ID = "DeviceId";
 	private static final String PARAM_RESULT_CODE = "resultCode";
 	private static final String PARAM_RESULT_MSG = "resultMsg";
 
-	public static boolean makeDonation(final String userId_str, final String bizId_str, final String deviceId_str){
+	public static boolean makeDonation(final String qrId_str, final String bizId_str){
 		try {
-			String targetURL = "https://api.bridginggood.com:8080/donation/MakeDonation.json";
+			String targetURL = CONST.API_DONATE_URL;
 			String requestParam = "";
 
-			String[][] param = { {PARAM_USER_ID, userId_str}, {PARAM_BIZ_ID, bizId_str}, {PARAM_DEVICE_ID, deviceId_str}};
+			String[][] param = { 
+					{PARAM_QR_ID, qrId_str}, 
+					{PARAM_BIZ_ID, bizId_str}
+			};
 			requestParam = BgHttpHelper.generateParamData(param);
 
 			String jsonStr = BgHttpHelper.requestHttpRequest(targetURL, requestParam, "POST");
 
 			JSONObject jsonObject = new JSONObject(jsonStr);
 
-			//TODO: Maybe this needs to be changed later on.
 			if(jsonObject.getString(PARAM_RESULT_CODE).charAt(0) == 'S'){
-				//Login succeed!
-
 				return true;
 			} else {
 				Log.d("BgBizDB", "makeDonation failed: "+jsonObject.getString(PARAM_RESULT_MSG));

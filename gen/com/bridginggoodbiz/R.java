@@ -13,38 +13,44 @@ public final class R {
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
         public static final int logo=0x7f020001;
+        public static final int tab_bg_selected=0x7f020002;
+        public static final int tab_bg_selector=0x7f020003;
+        public static final int tab_bg_unselected=0x7f020004;
     }
     public static final class id {
         /**  Messages IDs 
          */
-        public static final int auto_focus=0x7f050000;
-        public static final int barcode_image_view=0x7f05000d;
-        public static final int btnLoadQRReader=0x7f050018;
-        public static final int btnLogin=0x7f050016;
-        public static final int btnQuit=0x7f05001a;
-        public static final int btnSignoutAndQuit=0x7f050019;
-        public static final int chkRememberLogin=0x7f050015;
-        public static final int decode=0x7f050001;
-        public static final int decode_failed=0x7f050002;
-        public static final int decode_succeeded=0x7f050003;
-        public static final int edtBizId=0x7f050011;
-        public static final int edtBizPassword=0x7f050014;
-        public static final int launch_product_query=0x7f050004;
-        public static final int lblBizId=0x7f050010;
-        public static final int lblBizPassword=0x7f050013;
-        public static final int lblWelcomeMessage=0x7f050017;
-        public static final int linearLayoutBizId=0x7f05000f;
-        public static final int linearLayoutBizPassword=0x7f050012;
-        public static final int preview_view=0x7f05000a;
-        public static final int quit=0x7f050005;
-        public static final int restart_preview=0x7f050006;
-        public static final int result_view=0x7f05000c;
-        public static final int return_scan_result=0x7f050007;
-        public static final int search_book_contents_failed=0x7f050008;
-        public static final int search_book_contents_succeeded=0x7f050009;
-        public static final int status_view=0x7f05000e;
-        public static final int txtQRCodeContent=0x7f05001b;
-        public static final int viewfinder_view=0x7f05000b;
+        public static final int auto_focus=0x7f040000;
+        public static final int barcode_image_view=0x7f04000d;
+        public static final int btnLoadQRReader=0x7f040018;
+        public static final int btnLogin=0x7f040016;
+        public static final int btnQuit=0x7f04001a;
+        public static final int btnSignoutAndQuit=0x7f040019;
+        public static final int chkRememberLogin=0x7f040015;
+        public static final int decode=0x7f040001;
+        public static final int decode_failed=0x7f040002;
+        public static final int decode_succeeded=0x7f040003;
+        public static final int edtBizPassword=0x7f040014;
+        public static final int edtBizUsername=0x7f040011;
+        public static final int launch_product_query=0x7f040004;
+        public static final int lblBizId=0x7f040010;
+        public static final int lblBizPassword=0x7f040013;
+        public static final int lblWelcomeMessage=0x7f040017;
+        public static final int linearLayoutBizId=0x7f04000f;
+        public static final int linearLayoutBizPassword=0x7f040012;
+        public static final int preview_view=0x7f04000a;
+        public static final int quit=0x7f040005;
+        public static final int restart_preview=0x7f040006;
+        public static final int result_view=0x7f04000c;
+        public static final int return_scan_result=0x7f040007;
+        public static final int search_book_contents_failed=0x7f040008;
+        public static final int search_book_contents_succeeded=0x7f040009;
+        public static final int status_view=0x7f04000e;
+        public static final int tabsImage=0x7f04001d;
+        public static final int tabsLayout=0x7f04001c;
+        public static final int tabsText=0x7f04001e;
+        public static final int txtQRCodeContent=0x7f04001b;
+        public static final int viewfinder_view=0x7f04000b;
     }
     public static final class layout {
         public static final int capture_layout=0x7f030000;
@@ -52,24 +58,26 @@ public final class R {
         public static final int main_layout=0x7f030002;
         public static final int qrreader_layout=0x7f030003;
         public static final int splash_layout=0x7f030004;
+        public static final int tabs_bg=0x7f030005;
     }
     public static final class string {
-        public static final int BUNDLE_TOKEN=0x7f040002;
-        public static final int CRYPT_SEED_STRING=0x7f040000;
-        public static final int MainController_loading_qr_reader=0x7f04000f;
-        public static final int PREFS_NAME=0x7f040001;
-        public static final int QRCodeReader_qrscanner_help_message=0x7f040010;
-        public static final int SplashController_splash_description=0x7f04000e;
-        public static final int app_name=0x7f04000d;
-        public static final int btnLogin=0x7f040005;
-        public static final int hello=0x7f04000c;
-        public static final int lblBizId=0x7f040003;
-        public static final int lblBizPassword=0x7f040004;
-        public static final int lblRememberLogin=0x7f040007;
-        public static final int load_qrreader=0x7f040009;
-        public static final int quit=0x7f04000b;
-        public static final int signout_quit=0x7f04000a;
-        public static final int txtBizIdHint=0x7f040006;
-        public static final int welcome_message=0x7f040008;
+        public static final int MainController_loading_qr_reader=0x7f05000d;
+        public static final int QRCodeReader_qrscanner_help_message=0x7f05000e;
+        public static final int SplashController_splash_description=0x7f05000c;
+        public static final int app_name=0x7f05000b;
+        public static final int btnLogin=0x7f050002;
+        public static final int hello=0x7f05000a;
+        public static final int lblBizId=0x7f050000;
+        public static final int lblBizPassword=0x7f050001;
+        public static final int lblRememberLogin=0x7f050004;
+        public static final int load_qrreader=0x7f050007;
+        public static final int quit=0x7f050009;
+        public static final int signout_quit=0x7f050008;
+        public static final int txtBizIdHint=0x7f050003;
+        public static final int txtBizPasswordHint=0x7f050005;
+        public static final int welcome_message=0x7f050006;
+    }
+    public static final class style {
+        public static final int Theme_TabTheme=0x7f060000;
     }
 }

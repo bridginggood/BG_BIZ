@@ -3,10 +3,11 @@
 	Used in LoginController 
  -->
 <resources>
-    <string name="lblBizId">Business ID</string>
+    <string name="lblBizId">Username</string>
     <string name="lblBizPassword">Password</string>
-    <string name="btnLogin">Login</string>
-    <string name="txtBizIdHint">Enter Business Id</string>
-    <string name="lblRememberLogin">Stay signed in</string>
+    <string name="btnLogin">Sign in</string>
+    <string name="txtBizIdHint">Username</string>
+    <string name="lblRememberLogin">Remember me</string>
+    <string name="txtBizPasswordHint">Password</string>
     
 </resources>

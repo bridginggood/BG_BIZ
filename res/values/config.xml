@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="CRYPT_SEED_STRING">bridginggood</string>
-    <string name="PREFS_NAME">BridgingGoodBizPref</string>
-    <string name="BUNDLE_TOKEN">bizToken</string>
-    
-</resources>
