@@ -21,11 +21,14 @@ public class SplashController extends Activity{
 
 		ConnectivityManager manager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo ni = manager.getActiveNetworkInfo();
-		if(ni== null || !ni.isConnected())
+		if(ni== null || !ni.isConnected())	//Terminate if no network is found
 		{
 			Toast.makeText(getApplicationContext(), "No network connection found. Please check your network status.", Toast.LENGTH_LONG).show();
+			finish();
+			return;
 		} 
 
+		//Start loading
 		SplashLoadingAsyncTask splashLoadingAsyncTask = new SplashLoadingAsyncTask(SplashController.this);
 		splashLoadingAsyncTask.execute();
 	}
