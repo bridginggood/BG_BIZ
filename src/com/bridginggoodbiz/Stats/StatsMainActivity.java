@@ -10,6 +10,6 @@ public class StatsMainActivity extends Activity{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.qrreader_layout);
+		setContentView(R.layout.stats_layout);
 	}
 }

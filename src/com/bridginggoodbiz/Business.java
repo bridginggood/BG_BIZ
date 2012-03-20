@@ -11,12 +11,14 @@ public class Business implements Serializable{
 	private static final long serialVersionUID = -1389775502329725462L;
 	private static String mBizId, mBizUsername, mBizPassword;
 	private static String mBizName;
+	private static boolean mAutoQR;
 	
-	public static void init(String bizId, String username, String password, String name){
+	public static void init(String bizId, String username, String password, String name, boolean auto){
 		setBizId(bizId);
 		setBizUsername(username);
 		setBizPassword(password);
 		setBizName(name);
+		setAutoQR(auto);
 	}
 	
 	public static void init(){
@@ -24,6 +26,7 @@ public class Business implements Serializable{
 		setBizName(null);
 		setBizPassword(null);
 		setBizUsername(null);
+		setAutoQR(false);
 	}
 	
 	public static String getBizUsername(){
@@ -56,6 +59,14 @@ public class Business implements Serializable{
 
 	public static void setBizName(String mBizName) {
 		Business.mBizName = mBizName;
+	}
+
+	public static boolean isAutoQR() {
+		return mAutoQR;
+	}
+
+	public static void setAutoQR(boolean mAutoQR) {
+		Business.mAutoQR = mAutoQR;
 	}
 	
 }

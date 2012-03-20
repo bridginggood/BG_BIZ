@@ -4,9 +4,13 @@ import com.bridginggoodbiz.DB.LoginJSON;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 public class SplashController extends Activity{
 	private ProgressDialog mProgressDialog;
@@ -14,6 +18,13 @@ public class SplashController extends Activity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash_layout);
+		
+		ConnectivityManager manager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo ni = manager.getActiveNetworkInfo();
+		if(ni== null || !ni.isConnected())
+		{
+			Toast.makeText(getApplicationContext(), "No network connection found. Please check your network status.", Toast.LENGTH_LONG).show();
+		} 
 
 		mProgressDialog = ProgressDialog.show(this, "", "Loading... Please wait", true, false);
 		Business.init();

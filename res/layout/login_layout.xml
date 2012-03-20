@@ -52,12 +52,6 @@
 
     </LinearLayout>
 
-    <CheckBox
-        android:id="@+id/chkRememberLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lblRememberLogin" />
-
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="fill_parent"

@@ -11,28 +11,17 @@
         android:layout_height="wrap_content"
         android:text="@string/welcome_message" />
 
+    <CheckBox
+        android:id="@+id/chkQRAutoStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/autostart_qrreader" />
+
     <Button
         android:id="@+id/btnLoadQRReader"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/load_qrreader" />
-
-    <Button
-        android:id="@+id/btnSignoutAndQuit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/signout_quit" />
-
-    <Button
-        android:id="@+id/btnQuit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/quit" />
-
-    <TextView
-        android:id="@+id/txtQRCodeContent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="@string/load_qrreader"
+        android:padding="20dp" />
 
 </LinearLayout>
