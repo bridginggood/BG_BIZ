@@ -15,12 +15,12 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import com.bg.google.zxing.client.android.integration.IntentIntegrator;
+import com.bg.google.zxing.client.android.integration.IntentResult;
 import com.bridginggoodbiz.Business;
 import com.bridginggoodbiz.CONST;
 import com.bridginggoodbiz.R;
 import com.bridginggoodbiz.DB.DonationJSON;
-import com.google.zxing.bg.client.android.integration.IntentIntegrator;
-import com.google.zxing.bg.client.android.integration.IntentResult;
 
 public class ScanMainActivity extends Activity {
 	/** Called when the activity is first created. */
