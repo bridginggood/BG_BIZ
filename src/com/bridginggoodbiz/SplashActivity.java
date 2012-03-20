@@ -93,7 +93,7 @@ public class SplashActivity extends Activity{
 			}
 			mProgressDialog.dismiss();
 
-			if(!isLoginSuccess && mErrStr == null)
+			if(!isLoginSuccess && mErrStr != null)
 				Toast.makeText(mContext, "Error occured:"+mErrStr, Toast.LENGTH_SHORT).show();
 
 			finish();

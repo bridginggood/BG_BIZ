@@ -5,19 +5,20 @@
     android:layout_height="fill_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/tab_bg_selector">
+    android:background="@drawable/selector_tab_bg">
 
     <ImageView
         android:id="@+id/tabsImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="TabImage" />
+        android:contentDescription="@string/tabImage" />
 
     <TextView
         android:id="@+id/tabsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TabTest"
-        android:textSize="15dp" />
+        android:text="@string/tabText"
+        android:textColor="@drawable/selector_tab_text"
+        android:textSize="13dp" />
 
 </LinearLayout>

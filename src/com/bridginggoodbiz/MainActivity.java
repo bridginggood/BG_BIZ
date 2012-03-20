@@ -28,9 +28,9 @@ public class MainActivity extends TabActivity {
 
 		//Apply customed tab layout
 		mTabHost = (TabHost) findViewById(android.R.id.tabhost);
-		setupTab("Scan", R.drawable.ic_launcher, new Intent().setClass(this, ScanActivityGroup.class));
-		setupTab("Stats", R.drawable.ic_launcher, new Intent().setClass(this, PrefActivityGroup.class));
-		setupTab("Preferences", R.drawable.ic_launcher, new Intent().setClass(this, StatsActivityGroup.class));
+		setupTab("Scan", R.drawable.selector_tab_scan, new Intent().setClass(this, ScanActivityGroup.class));
+		setupTab("Stats", R.drawable.selector_tab_stats, new Intent().setClass(this, PrefActivityGroup.class));
+		setupTab("Preferences", R.drawable.selector_tab_pref, new Intent().setClass(this, StatsActivityGroup.class));
 		
 		mTabHost.setCurrentTab(0);
 	}
