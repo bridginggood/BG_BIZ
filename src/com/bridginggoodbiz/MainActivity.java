@@ -10,9 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
+import android.widget.Toast;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
+import com.bg.google.zxing.client.android.integration.IntentIntegrator;
+import com.bg.google.zxing.client.android.integration.IntentResult;
 import com.bridginggoodbiz.Pref.PrefActivityGroup;
 import com.bridginggoodbiz.Scan.ScanActivityGroup;
 import com.bridginggoodbiz.Stats.StatsActivityGroup;
@@ -31,7 +34,7 @@ public class MainActivity extends TabActivity {
 		setupTab("Scan", R.drawable.selector_tab_scan, new Intent().setClass(this, ScanActivityGroup.class));
 		setupTab("Stats", R.drawable.selector_tab_stats, new Intent().setClass(this, PrefActivityGroup.class));
 		setupTab("Preferences", R.drawable.selector_tab_pref, new Intent().setClass(this, StatsActivityGroup.class));
-		
+
 		mTabHost.setCurrentTab(0);
 	}
 
@@ -57,5 +60,15 @@ public class MainActivity extends TabActivity {
 		super.onDestroy();
 		Log.d("BGB", "onDestroy called");
 		System.exit(0);
+	}
+
+	//Called to handle scanner result
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data)
+	{
+		Toast.makeText(getParent(), "onActivityResult From Main"+resultCode, Toast.LENGTH_SHORT).show();
+		// Handle QR Scan result
+		IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+		//updateQRCodeResult(result);
 	}
 }

@@ -7,7 +7,7 @@ public class CONST {
 	public static final long SPLASH_DELAY = 1500;
 	
 	public static final String CRYPT_SEED = "zkdltmxm0607!"; //kaist0607
-	public static final String QRCODE_URL = "http://www.bridginggood.com/?qr=";
+	public static final String QRCODE_URL = "http://www.bridginggood.com/?qr";
 	public static final int QRCODE_ID_LENGTH = 16;
 	
 	//For BridgingGood Database API

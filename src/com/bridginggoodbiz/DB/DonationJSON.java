@@ -7,6 +7,7 @@
  */
 package com.bridginggoodbiz.DB;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.bridginggoodbiz.CONST;
@@ -33,7 +34,8 @@ public class DonationJSON {
 
 			String jsonStr = BgHttpHelper.requestHttpRequest(targetURL, requestParam, "POST");
 
-			JSONObject jsonObject = new JSONObject(jsonStr);
+			JSONArray jsonArray = new JSONArray(jsonStr);
+			JSONObject jsonObject = (JSONObject) jsonArray.get(0);
 
 			if(jsonObject.getString(PARAM_RESULT_CODE).charAt(0) == 'S'){
 				return true;
