@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_welcome_message">Welcome Biz!</string>
+    <string name="scan_no_of_scan">Number of scans today:</string>
+    <string name="scan_load_qrreader">Start QR Scanner</string>
+   <string name="scan_number">00</string>
+</resources>

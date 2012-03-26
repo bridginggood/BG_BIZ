@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.CheckBox;
+import android.widget.TextView;
 
 import com.bg.google.zxing.client.android.integration.IntentIntegrator;
 import com.bridginggoodbiz.Business;
@@ -16,21 +16,22 @@ public class ScanMainActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.qrreader_layout);
+		setContentView(R.layout.scan_layout);
 
 		initViewControls();
 	}
 
 	private void initViewControls(){
-		CheckBox chkAutoQR = (CheckBox)findViewById(R.id.chkQRAutoStart);
-		chkAutoQR.setChecked(Business.isAutoQR());	//Load saved value
-
-		Button btnLoadQRReader = (Button)findViewById(R.id.btnLoadQRReader);
+		//Textview header
+		TextView txtHeader = (TextView)findViewById(R.id.scan_welcome_message_textview);
+		txtHeader.setText(Business.getBizName());
+		
+		//Button
+		Button btnLoadQRReader = (Button)findViewById(R.id.scan_load_qrreader_button);
 		btnLoadQRReader.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				CheckBox chkAutoQR = (CheckBox)findViewById(R.id.chkQRAutoStart);
-				Business.setAutoQR(chkAutoQR.isChecked());	//Update check status
+				Business.setAutoQR(true);	//Update check status
 				loadQRScanner();
 			}
 		});
@@ -43,5 +44,5 @@ public class ScanMainActivity extends Activity {
 		IntentIntegrator.initiateScan(getParent());
 	}
 
-	
+
 }

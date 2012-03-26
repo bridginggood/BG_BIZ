@@ -9,5 +9,6 @@
     <string name="txtBizIdHint">Username</string>
     <string name="lblRememberLogin">Remember me</string>
     <string name="txtBizPasswordHint">Password</string>
+    <string name="btnSupport">Support</string>
     
 </resources>

@@ -27,11 +27,11 @@ public class LoginActivity extends Activity {
 
 	//Initialize views (controls)
 	private void initViews(){
-		final EditText edtBizUsername = (EditText)findViewById(R.id.edtBizUsername);
-		final EditText edtBizPassword = (EditText)findViewById(R.id.edtBizPassword);
+		final EditText edtBizUsername = (EditText)findViewById(R.id.login_business_id_editview);
+		final EditText edtBizPassword = (EditText)findViewById(R.id.login_business_pw_editview);
 
 		//Add button listener for Login button
-		Button btnLogin = (Button) findViewById(R.id.btnLogin);
+		Button btnLogin = (Button) findViewById(R.id.login_login_button);
 		btnLogin.setOnClickListener(new OnClickListener(){
 			public void onClick(View v){
 				//Encrypt to Business

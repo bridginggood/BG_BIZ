@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="welcome_message">Welcome Biz!</string>
-    <string name="autostart_qrreader">Automatically restart QRcode Scanner</string>
-    <string name="load_qrreader">Load QR Reader</string>
-    <string name="signout_quit">Sign out and Quit</string>
-    <string name="quit">Quit</string>
-</resources>

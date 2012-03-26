@@ -11,77 +11,102 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int actionbar_gradient_end=0x7f04000b;
-        public static final int actionbar_gradient_start=0x7f04000a;
+        public static final int actionbar_gradient_center=0x7f040010;
+        public static final int actionbar_gradient_end=0x7f04000f;
+        /**  Action bar 
+         */
+        public static final int actionbar_gradient_start=0x7f04000e;
         public static final int background=0x7f040000;
-        public static final int background_gradient_end=0x7f040009;
-        public static final int background_gradient_start=0x7f040008;
+        public static final int background_gradient_end=0x7f04000d;
+        /**  Background Layout 
+         */
+        public static final int background_gradient_start=0x7f04000c;
         public static final int black=0x7f040003;
-        public static final int dark_brown=0x7f04000c;
-        public static final int gray=0x7f04000d;
-        public static final int gray_tab_selected=0x7f04000f;
-        public static final int gray_tab_unselected=0x7f04000e;
-        public static final int gray_unselected=0x7f040010;
-        public static final int lime=0x7f040011;
-        public static final int tab_selected_bg_gradient_center=0x7f040006;
-        public static final int tab_selected_bg_gradient_start=0x7f040005;
-        public static final int tab_text_unselected=0x7f040007;
-        public static final int tab_unselected_bg_gradient=0x7f040004;
+        public static final int brown=0x7f040006;
+        public static final int button_pressed_end=0x7f040014;
+        public static final int button_pressed_start=0x7f040013;
+        public static final int button_stroke=0x7f040015;
+        public static final int button_unpressed_end=0x7f040012;
+        /**  Button 
+         */
+        public static final int button_unpressed_start=0x7f040011;
+        /**  Extra 
+         */
+        public static final int dark_brown=0x7f040016;
+        public static final int gold=0x7f040005;
+        public static final int gray=0x7f040004;
+        public static final int gray_unselected=0x7f040017;
+        public static final int light_yellow=0x7f040007;
+        public static final int lime=0x7f040018;
+        public static final int tab_selected_bg_gradient_center=0x7f04000a;
+        public static final int tab_selected_bg_gradient_start=0x7f040009;
+        public static final int tab_text_unselected=0x7f04000b;
+        /**  Tabs 
+         */
+        public static final int tab_unselected_bg_gradient=0x7f040008;
         public static final int transparent=0x7f040001;
         public static final int white=0x7f040002;
     }
     public static final class drawable {
-        public static final int background_login=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int icon_pref0=0x7f020002;
-        public static final int icon_pref1=0x7f020003;
-        public static final int icon_scan0=0x7f020004;
-        public static final int icon_scan1=0x7f020005;
-        public static final int icon_stats0=0x7f020006;
-        public static final int logo=0x7f020007;
-        public static final int selected_tab_bg=0x7f020008;
-        public static final int selector_tab_bg=0x7f020009;
-        public static final int selector_tab_pref=0x7f02000a;
-        public static final int selector_tab_scan=0x7f02000b;
-        public static final int selector_tab_stats=0x7f02000c;
-        public static final int selector_tab_text=0x7f02000d;
-        public static final int tab_bg_selected=0x7f02000e;
-        public static final int tab_bg_selector=0x7f02000f;
-        public static final int tab_bg_unselected=0x7f020010;
-        public static final int unselected_tab_bg=0x7f020011;
+        public static final int background_layout=0x7f020000;
+        public static final int background_login=0x7f020001;
+        public static final int background_sublayout=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int icon_pref0=0x7f020004;
+        public static final int icon_pref1=0x7f020005;
+        public static final int icon_scan0=0x7f020006;
+        public static final int icon_scan1=0x7f020007;
+        public static final int icon_stats0=0x7f020008;
+        public static final int selected_tab_bg=0x7f020009;
+        public static final int selector_button=0x7f02000a;
+        public static final int selector_tab_bg=0x7f02000b;
+        public static final int selector_tab_pref=0x7f02000c;
+        public static final int selector_tab_scan=0x7f02000d;
+        public static final int selector_tab_stats=0x7f02000e;
+        public static final int selector_tab_text=0x7f02000f;
+        public static final int splash=0x7f020010;
+        public static final int tab_bg_selected=0x7f020011;
+        public static final int tab_bg_selector=0x7f020012;
+        public static final int tab_bg_unselected=0x7f020013;
+        public static final int unselected_tab_bg=0x7f020014;
     }
     public static final class id {
         /**  Messages IDs 
          */
         public static final int auto_focus=0x7f050000;
         public static final int barcode_image_view=0x7f05000d;
-        public static final int btnLoadQRReader=0x7f050019;
-        public static final int btnLogin=0x7f050015;
-        public static final int button1=0x7f05001a;
-        public static final int chkQRAutoStart=0x7f050018;
+        public static final int button1=0x7f05001f;
         public static final int decode=0x7f050001;
         public static final int decode_failed=0x7f050002;
         public static final int decode_succeeded=0x7f050003;
-        public static final int edtBizPassword=0x7f050014;
-        public static final int edtBizUsername=0x7f050011;
         public static final int launch_product_query=0x7f050004;
-        public static final int lblBizId=0x7f050010;
-        public static final int lblBizPassword=0x7f050013;
-        public static final int lblWelcomeMessage=0x7f050017;
         public static final int linearLayoutBizId=0x7f05000f;
         public static final int linearLayoutBizPassword=0x7f050012;
+        public static final int login_business_id_editview=0x7f050011;
+        public static final int login_business_id_textview=0x7f050010;
+        public static final int login_business_pw_editview=0x7f050014;
+        public static final int login_business_pw_textview=0x7f050013;
+        public static final int login_login_button=0x7f050015;
+        public static final int login_support_button=0x7f050016;
+        public static final int pref_logout_button=0x7f05001a;
+        public static final int pref_logout_layout=0x7f050019;
+        public static final int pref_stat_layout=0x7f050017;
         public static final int preview_view=0x7f05000a;
         public static final int quit=0x7f050005;
         public static final int restart_preview=0x7f050006;
         public static final int result_view=0x7f05000c;
         public static final int return_scan_result=0x7f050007;
+        public static final int scan_load_qrreader_button=0x7f05001e;
+        public static final int scan_no_of_scans_textview=0x7f05001c;
+        public static final int scan_number_textview=0x7f05001d;
+        public static final int scan_welcome_message_textview=0x7f05001b;
         public static final int search_book_contents_failed=0x7f050008;
         public static final int search_book_contents_succeeded=0x7f050009;
         public static final int status_view=0x7f05000e;
-        public static final int tabsImage=0x7f05001c;
-        public static final int tabsLayout=0x7f05001b;
-        public static final int tabsText=0x7f05001d;
-        public static final int textView1=0x7f050016;
+        public static final int tabsImage=0x7f050021;
+        public static final int tabsLayout=0x7f050020;
+        public static final int tabsText=0x7f050022;
+        public static final int textView1=0x7f050018;
         public static final int viewfinder_view=0x7f05000b;
     }
     public static final class layout {
@@ -89,32 +114,37 @@ public final class R {
         public static final int login_layout=0x7f030001;
         public static final int main_layout=0x7f030002;
         public static final int pref_layout=0x7f030003;
-        public static final int qrreader_layout=0x7f030004;
+        public static final int scan_layout=0x7f030004;
         public static final int splash_layout=0x7f030005;
         public static final int stats_layout=0x7f030006;
         public static final int tabs_bg=0x7f030007;
     }
     public static final class string {
-        public static final int MainController_loading_qr_reader=0x7f06000e;
-        public static final int QRCodeReader_qrscanner_help_message=0x7f06000f;
-        public static final int SplashController_splash_description=0x7f06000d;
-        public static final int app_name=0x7f06000c;
-        public static final int autostart_qrreader=0x7f060007;
-        public static final int btnLogin=0x7f060002;
-        public static final int hello=0x7f06000b;
-        public static final int lblBizId=0x7f060000;
-        public static final int lblBizPassword=0x7f060001;
-        public static final int lblRememberLogin=0x7f060004;
-        public static final int load_qrreader=0x7f060008;
-        public static final int quit=0x7f06000a;
-        public static final int signout_quit=0x7f060009;
+        public static final int MainController_loading_qr_reader=0x7f060003;
+        public static final int QRCodeReader_qrscanner_help_message=0x7f060004;
+        public static final int SplashController_splash_description=0x7f060002;
+        public static final int app_name=0x7f060001;
+        public static final int btnLogin=0x7f060007;
+        public static final int btnSupport=0x7f06000b;
+        public static final int hello=0x7f060000;
+        public static final int lblBizId=0x7f060005;
+        public static final int lblBizPassword=0x7f060006;
+        public static final int lblRememberLogin=0x7f060009;
+        public static final int scan_load_qrreader=0x7f06000e;
+        public static final int scan_no_of_scan=0x7f06000d;
+        public static final int scan_number=0x7f06000f;
+        public static final int scan_welcome_message=0x7f06000c;
         public static final int tabImage=0x7f060010;
         public static final int tabText=0x7f060011;
-        public static final int txtBizIdHint=0x7f060003;
-        public static final int txtBizPasswordHint=0x7f060005;
-        public static final int welcome_message=0x7f060006;
+        public static final int txtBizIdHint=0x7f060008;
+        public static final int txtBizPasswordHint=0x7f06000a;
     }
     public static final class style {
-        public static final int Theme_TabTheme=0x7f070000;
+        public static final int ButtonText=0x7f070000;
+        public static final int Theme_TabTheme=0x7f070005;
+        public static final int login_textview=0x7f070001;
+        public static final int scan_no_of_scans_textview=0x7f070003;
+        public static final int scan_number_textview=0x7f070004;
+        public static final int scan_welcome_textview=0x7f070002;
     }
 }
