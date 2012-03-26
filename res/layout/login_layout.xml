@@ -77,7 +77,11 @@
             style="@style/ButtonText"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="3dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/selector_button"
             android:padding="15dp"
             android:text="@string/btnLogin" />
@@ -87,12 +91,12 @@
             style="@style/ButtonText"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/selector_button"
-            android:padding="10dp"
+            android:padding="15dp"
             android:text="@string/btnSupport" />
     </LinearLayout>
 

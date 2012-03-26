@@ -75,7 +75,7 @@ public final class R {
          */
         public static final int auto_focus=0x7f050000;
         public static final int barcode_image_view=0x7f05000d;
-        public static final int button1=0x7f05001f;
+        public static final int button1=0x7f050020;
         public static final int decode=0x7f050001;
         public static final int decode_failed=0x7f050002;
         public static final int decode_succeeded=0x7f050003;
@@ -96,16 +96,17 @@ public final class R {
         public static final int restart_preview=0x7f050006;
         public static final int result_view=0x7f05000c;
         public static final int return_scan_result=0x7f050007;
-        public static final int scan_load_qrreader_button=0x7f05001e;
+        public static final int scan_load_qrreader_button=0x7f05001f;
         public static final int scan_no_of_scans_textview=0x7f05001c;
         public static final int scan_number_textview=0x7f05001d;
+        public static final int scan_progressbar=0x7f05001e;
         public static final int scan_welcome_message_textview=0x7f05001b;
         public static final int search_book_contents_failed=0x7f050008;
         public static final int search_book_contents_succeeded=0x7f050009;
         public static final int status_view=0x7f05000e;
-        public static final int tabsImage=0x7f050021;
-        public static final int tabsLayout=0x7f050020;
-        public static final int tabsText=0x7f050022;
+        public static final int tabsImage=0x7f050022;
+        public static final int tabsLayout=0x7f050021;
+        public static final int tabsText=0x7f050023;
         public static final int textView1=0x7f050018;
         public static final int viewfinder_view=0x7f05000b;
     }
@@ -130,21 +131,23 @@ public final class R {
         public static final int lblBizId=0x7f060005;
         public static final int lblBizPassword=0x7f060006;
         public static final int lblRememberLogin=0x7f060009;
-        public static final int scan_load_qrreader=0x7f06000e;
-        public static final int scan_no_of_scan=0x7f06000d;
-        public static final int scan_number=0x7f06000f;
-        public static final int scan_welcome_message=0x7f06000c;
-        public static final int tabImage=0x7f060010;
-        public static final int tabText=0x7f060011;
+        public static final int pref_logout_button=0x7f06000c;
+        public static final int scan_load_qrreader=0x7f06000f;
+        public static final int scan_no_of_scan=0x7f06000e;
+        public static final int scan_number=0x7f060010;
+        public static final int scan_welcome_message=0x7f06000d;
+        public static final int tabImage=0x7f060011;
+        public static final int tabText=0x7f060012;
         public static final int txtBizIdHint=0x7f060008;
         public static final int txtBizPasswordHint=0x7f06000a;
     }
     public static final class style {
         public static final int ButtonText=0x7f070000;
-        public static final int Theme_TabTheme=0x7f070005;
-        public static final int login_textview=0x7f070001;
-        public static final int scan_no_of_scans_textview=0x7f070003;
-        public static final int scan_number_textview=0x7f070004;
-        public static final int scan_welcome_textview=0x7f070002;
+        public static final int GenericProgressIndicator=0x7f070001;
+        public static final int Theme_TabTheme=0x7f070006;
+        public static final int login_textview=0x7f070002;
+        public static final int scan_no_of_scans_textview=0x7f070004;
+        public static final int scan_number_textview=0x7f070005;
+        public static final int scan_welcome_textview=0x7f070003;
     }
 }

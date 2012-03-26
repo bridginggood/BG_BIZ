@@ -15,5 +15,7 @@ public class CONST {
 	
 	public static final String API_LOGIN_URL = API_URL+"/auth/LoginByBusinessFromMobile.json";
 
+	//Stat
+	public static final String API_STAT_DAILY_COUNT_URL = API_URL+"/stats/BusinessTodayCount.json";
 	
 }

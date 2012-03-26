@@ -12,6 +12,7 @@ public class LoginJSON {
 	private static final String PARAM_USERNAME = "Username";
 	private static final String PARAM_PASSWORD = "Password";
 	private static final String PARAM_ID = "BusinessId";
+	private static final String PARAM_BIZNAME = "BusinessName";
 	private static final String PARAM_RESULT_CODE = "resultCode";
 	private static final String PARAM_RESULT_MSG = "resultMsg";
 
@@ -41,5 +42,6 @@ public class LoginJSON {
 	private static void updateBusienssWithJSON(JSONObject jsonObj) throws Exception{
 		//Only need to update business id?
 		Business.setBizId(jsonObj.getString(PARAM_ID));
+		Business.setBizName(jsonObj.getString(PARAM_BIZNAME));
 	}
 }

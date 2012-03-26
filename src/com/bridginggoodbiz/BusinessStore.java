@@ -16,7 +16,9 @@ public class BusinessStore {
 
 	private static final String BIZ_USERNAME = "BusinessUsername";
 	private static final String BIZ_PW = "BusinessPw";
+	private static final String BIZ_ID = "BusinessId";
 	private static final String BIZ_AUTOQR = "BusinessAutoQR";
+	private static final String BIZ_NAME = "BusinessName";
 	private static final String KEY = "BridgingGoodBizStore";			//SharedPreference Key Value
 
 	/**
@@ -26,16 +28,20 @@ public class BusinessStore {
 	 */
 	public static boolean saveUserSession(Context context) {
 		Editor editor = context.getSharedPreferences(KEY, Context.MODE_PRIVATE).edit();
+		editor.putString(BIZ_ID, Business.getBizId());
 		editor.putString(BIZ_USERNAME, Business.getBizUsername());
 		editor.putString(BIZ_PW, Business.getBizPassword());
+		editor.putString(BIZ_NAME, Business.getBizName());
 		editor.putBoolean(BIZ_AUTOQR, Business.isAutoQR());
 		return editor.commit();
 	}
 
 	public static void loadUserSession(Context context){
 		SharedPreferences savedSession = context.getSharedPreferences(KEY, Context.MODE_PRIVATE);
+		Business.setBizId(savedSession.getString(BIZ_ID, null));
 		Business.setBizUsername(savedSession.getString(BIZ_USERNAME, null));
 		Business.setBizPassword(savedSession.getString(BIZ_PW, null));
+		Business.setBizName(savedSession.getString(BIZ_NAME, null));
 		Business.setAutoQR(savedSession.getBoolean(BIZ_AUTOQR, false));
 	}
 
