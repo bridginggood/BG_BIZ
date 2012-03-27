@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_list"
+    android:gravity="center"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/stats_datalist_date_textview"
+        style="@style/stats_listview_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/hello" />
+
+    <TextView
+        android:id="@+id/stats_datalist_scan_textview"
+        style="@style/stats_listview_scan_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/hello" />
+
+    <TextView
+        android:id="@+id/stats_datalist_total_textview"
+        style="@style/stats_listview_total_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/hello" />
+
+</LinearLayout>

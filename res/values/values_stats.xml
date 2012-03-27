@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stats_title_date">Date</string>
+    <string name="stats_title_scan">Scans</string>
+    <string name="stats_title_total">Total</string>
+    
+    <string name="stats_navigation_daily">Daily</string>
+    <string name="stats_navigation_weekly">Weekly</string>
+    <string name="stats_navigation_monthly">Monthly</string>
+</resources>

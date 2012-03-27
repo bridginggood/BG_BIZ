@@ -87,7 +87,7 @@ public class ScanMainActivity extends Activity {
 		//Load current location
 		protected String doInBackground(Context... contexts)
 		{
-			return StatsJSON.getDailyCount();
+			return StatsJSON.getTodayCount();
 		}
 		protected void onPostExecute(String dailyCount)
 		{
