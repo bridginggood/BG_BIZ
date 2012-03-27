@@ -15,15 +15,32 @@ import com.bridginggoodbiz.R;
 import com.bridginggoodbiz.DB.StatsJSON;
 
 public class ScanMainActivity extends Activity {
-	private LoadAsyncTask mLoadAsyncTask;
-	
+	public LoadAsyncTask mLoadAsyncTask;
+	public static ScanMainActivity _this;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.scan_layout);
+		
+		_this = this;
 
 		initViewControls();
+
+		updateDailyCounter();
+	}
+
+	public void updateDailyCounter(){
+		//Cancel running thread
+		if(mLoadAsyncTask != null && (mLoadAsyncTask.getStatus().equals(AsyncTask.Status.RUNNING)
+				|| mLoadAsyncTask.getStatus().equals(AsyncTask.Status.PENDING))){
+			mLoadAsyncTask.cancel(true);
+		}
+
+		//Load daily stat
+		mLoadAsyncTask = new LoadAsyncTask();
+		mLoadAsyncTask.execute();
 	}
 
 	private void initViewControls(){
@@ -76,7 +93,7 @@ public class ScanMainActivity extends Activity {
 		{
 			if (dailyCount == null)
 				dailyCount = "00";
-			
+
 			TextView txtDailyCount = (TextView)findViewById(R.id.scan_number_textview);
 			txtDailyCount.setText(dailyCount);
 			toggleLayout(false);
@@ -86,15 +103,5 @@ public class ScanMainActivity extends Activity {
 	@Override
 	public void onResume(){
 		super.onResume();
-		
-		//Cancel running thread
-		if(mLoadAsyncTask != null && (mLoadAsyncTask.getStatus().equals(AsyncTask.Status.RUNNING)
-				|| mLoadAsyncTask.getStatus().equals(AsyncTask.Status.PENDING))){
-			mLoadAsyncTask.cancel(true);
-		}
-		
-		//Load daily stat
-		mLoadAsyncTask = new LoadAsyncTask();
-		mLoadAsyncTask.execute();
 	}
 }

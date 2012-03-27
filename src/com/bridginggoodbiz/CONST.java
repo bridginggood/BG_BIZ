@@ -17,5 +17,6 @@ public class CONST {
 
 	//Stat
 	public static final String API_STAT_DAILY_COUNT_URL = API_URL+"/stats/BusinessTodayCount.json";
+	public static final String API_STAT_ACCOUNT_DETAIL_URL = API_URL+"/stats/BusinessAccountDetail.json";
 	
 }

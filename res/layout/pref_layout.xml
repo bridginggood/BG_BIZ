@@ -1,42 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background_layout"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/pref_stat_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        android:background="@drawable/background_sublayout" >
+    <TextView
+        android:id="@+id/pref_account_detail_caption_textview"
+        style="@style/pref_account_detail_caption_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/pref_account_detail_caption" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-    </LinearLayout>
+    <!-- Logout footer -->
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/pref_logout_layout"
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        android:layout_weight="1" >
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
 
         <Button
             android:id="@+id/pref_logout_button"
             style="@style/ButtonText"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_margin="3dp"
             android:background="@drawable/selector_button"
             android:gravity="center"
             android:padding="15dp"
-            android:text="@string/btnLogin" />
-    </LinearLayout>
+            android:text="@string/pref_logout_button"
+            android:textSize="18dp" />
+        <!-- Support, Send Feedback, FAQ -->
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pref_logout_button"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/profile_preferences_support"
+                style="@style/pref_footer_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_preferences_support" />
+
+            <View
+                android:layout_width="2dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/profile_preferences_sendfeedback"
+                style="@style/pref_footer_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_preferences_sendfeedback" />
+
+            <View
+                android:layout_width="2dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/profile_preferences_faq"
+                style="@style/pref_footer_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pref_preferences_faq" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- pref stat layout -->
+
+    <RelativeLayout
+        android:id="@+id/pref_stat_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/pref_logout_layout"
+        android:layout_below="@id/pref_account_detail_caption_textview"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_sublayout" >
+
+        <ProgressBar
+            android:id="@+id/pref_progressbar"
+            style="@style/GenericProgressIndicator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:id="@+id/pref_account_detail_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp" >
+
+            <TableRow>
+
+                <TextView
+                    style="@style/pref_account_detail_caption_body_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="5dp"
+                    android:text="@string/pref_account_supporting_charity_text" />
+
+                <TextView
+                    android:id="@+id/pref_account_supporting_charity_textview"
+                    style="@style/pref_account_detail_body_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/pref_account_body_text" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/pref_account_detail_caption_body_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="5dp"
+                    android:text="@string/pref_account_date_text" />
+
+                <TextView
+                    android:id="@+id/pref_account_date_textview"
+                    style="@style/pref_account_detail_body_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/pref_account_body_text" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/pref_account_detail_caption_body_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="5dp"
+                    android:text="@string/pref_account_donation_amount_text" />
+
+                <TextView
+                    android:id="@+id/pref_account_donation_amount_textview"
+                    style="@style/pref_account_detail_body_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/pref_account_body_text" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

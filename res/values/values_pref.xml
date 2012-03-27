@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="pref_logout_button">Sign out</string>
+    <string name="pref_account_detail_caption">Account Detail</string>
+    <string name="pref_account_body_text">!</string>
+    <string name="pref_account_supporting_charity_text">Supporting Charity: </string>
+    <string name="pref_account_date_text">Duration:</string>
+    <string name="pref_account_donation_amount_text">Donation Amount:</string>
+    
+    <string name="pref_preferences_support"><u>Support</u></string>
+    <string name="pref_preferences_sendfeedback"><u>Send Feedback</u></string>
+    <string name="pref_preferences_faq"><u>FAQ</u></string>
+
 </resources>
