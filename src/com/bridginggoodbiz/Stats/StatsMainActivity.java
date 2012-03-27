@@ -42,9 +42,11 @@ public class StatsMainActivity extends Activity{
 	}
 
 	private void initList(ArrayList<DataRecord> dataArrayList){
-		StatsDataListAdapter listAdapter = new StatsDataListAdapter(this, R.layout.stats_datalist_cell, dataArrayList);
-		ListView listview = (ListView)findViewById(R.id.stats_data_listview);
-		listview.setAdapter(listAdapter);
+		if (dataArrayList != null){
+			StatsDataListAdapter listAdapter = new StatsDataListAdapter(this, R.layout.stats_datalist_cell, dataArrayList);
+			ListView listview = (ListView)findViewById(R.id.stats_data_listview);
+			listview.setAdapter(listAdapter);
+		}
 	}
 
 	private void initButtons(){
@@ -61,7 +63,7 @@ public class StatsMainActivity extends Activity{
 				updateButtonStatus();
 			}
 		});
-		
+
 		//Weekly button
 		btnWeekly.setOnClickListener(new OnClickListener() {
 			@Override
@@ -71,7 +73,7 @@ public class StatsMainActivity extends Activity{
 				updateButtonStatus();
 			}
 		});
-		
+
 		//Monthly button
 		btnMonthly.setOnClickListener(new OnClickListener() {
 			@Override

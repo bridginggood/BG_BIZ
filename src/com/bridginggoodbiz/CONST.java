@@ -24,7 +24,7 @@ public class CONST {
 	public static final String API_STAT_ACCOUNT_DETAIL_URL = API_URL+"/stats/BusinessAccountDetail.json";
 	
 	public static final String API_STAT_DAILY_COUNT_URL = API_URL+"/stats/BusinessStatsDaily.json";
-	public static final String API_STAT_WEEKLY_COUNT_URL = API_URL+"/stats/BusinessStatsDaily.json";
-	public static final String API_STAT_MONTHLY_COUNT_URL = API_URL+"/stats/BusinessStatsDaily.json";
+	public static final String API_STAT_WEEKLY_COUNT_URL = API_URL+"/stats/BusinessStatsWeekly.json";
+	public static final String API_STAT_MONTHLY_COUNT_URL = API_URL+"/stats/BusinessStatsMonthly.json";
 	
 }

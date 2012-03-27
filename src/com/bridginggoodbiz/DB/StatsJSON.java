@@ -1,5 +1,6 @@
 package com.bridginggoodbiz.DB;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
@@ -128,6 +129,9 @@ public class StatsJSON {
 					String date = jsonObject.getString(PARAM_DONATION_DATE);
 					String scans = jsonObject.getString(PARAM_SCANS);
 					String total = jsonObject.getString(PARAM_DONATION_AMOUNT);
+					
+					DecimalFormat dFormat = new DecimalFormat("#0.00");
+					total = "$"+dFormat.format(Float.parseFloat(total));
 
 					DataRecord dr = new DataRecord(date, scans, total);
 					arData.add(dr);
