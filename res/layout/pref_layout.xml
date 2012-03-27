@@ -23,7 +23,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp" >
 
@@ -42,6 +42,7 @@
         <!-- Support, Send Feedback, FAQ -->
 
         <LinearLayout
+            android:id="@+id/pref_contactus_layout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/pref_logout_button"
@@ -53,7 +54,7 @@
             android:padding="5dp" >
 
             <TextView
-                android:id="@+id/profile_preferences_support"
+                android:id="@+id/pref_preferences_support"
                 style="@style/pref_footer_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,7 +68,7 @@
                 android:background="@color/gray" />
 
             <TextView
-                android:id="@+id/profile_preferences_sendfeedback"
+                android:id="@+id/pref_preferences_sendfeedback"
                 style="@style/pref_footer_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,12 +82,21 @@
                 android:background="@color/gray" />
 
             <TextView
-                android:id="@+id/profile_preferences_faq"
+                android:id="@+id/pref_preferences_faq"
                 style="@style/pref_footer_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pref_preferences_faq" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/pref_version_textview"
+            style="@style/pref_version_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/pref_contactus_layout"
+            android:text="@string/version_code" />
     </RelativeLayout>
 
     <!-- pref stat layout -->
