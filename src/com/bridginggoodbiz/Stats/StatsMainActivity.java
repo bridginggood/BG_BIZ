@@ -43,9 +43,13 @@ public class StatsMainActivity extends Activity{
 
 	private void initList(ArrayList<DataRecord> dataArrayList){
 		if (dataArrayList != null){
+			findViewById(R.id.stats_no_history_textview).setVisibility(View.GONE);
+			
 			StatsDataListAdapter listAdapter = new StatsDataListAdapter(this, R.layout.stats_datalist_cell, dataArrayList);
 			ListView listview = (ListView)findViewById(R.id.stats_data_listview);
 			listview.setAdapter(listAdapter);
+		} else {
+			findViewById(R.id.stats_no_history_textview).setVisibility(View.VISIBLE);
 		}
 	}
 
@@ -53,6 +57,7 @@ public class StatsMainActivity extends Activity{
 		Button btnDaily = (Button)findViewById(R.id.stats_navigation_daily_button);
 		Button btnWeekly = (Button)findViewById(R.id.stats_navigation_weekly_button);
 		Button btnMonthly = (Button)findViewById(R.id.stats_navigation_monthly_button);
+		Button btnRefresh = (Button)findViewById(R.id.stats_refresh_button);
 
 		//Daily button
 		btnDaily.setOnClickListener(new OnClickListener() {
@@ -79,6 +84,15 @@ public class StatsMainActivity extends Activity{
 			@Override
 			public void onClick(View v) {
 				mStatType = CONST.STATS_RESULT_COUNT_MONTHLY;
+				loadStat();
+				updateButtonStatus();
+			}
+		});
+		
+		//Refresh button
+		btnRefresh.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
 				loadStat();
 				updateButtonStatus();
 			}
@@ -112,6 +126,7 @@ public class StatsMainActivity extends Activity{
 
 	private void toggleLayout(boolean isLoading){
 		if(isLoading){
+			findViewById(R.id.stats_no_history_textview).setVisibility(View.GONE);
 			findViewById(R.id.stats_data_listview).setVisibility(View.GONE);
 			findViewById(R.id.stats_progressbar).setVisibility(View.VISIBLE);
 		} else {

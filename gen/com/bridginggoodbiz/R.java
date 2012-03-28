@@ -115,21 +115,23 @@ public final class R {
         public static final int scan_welcome_message_textview=0x7f050025;
         public static final int search_book_contents_failed=0x7f050008;
         public static final int search_book_contents_succeeded=0x7f050009;
-        public static final int stats_caption_layout=0x7f050032;
-        public static final int stats_data_listview=0x7f050034;
+        public static final int stats_caption_layout=0x7f050033;
+        public static final int stats_data_listview=0x7f050036;
         public static final int stats_datalist_date_textview=0x7f05002a;
         public static final int stats_datalist_scan_textview=0x7f05002b;
         public static final int stats_datalist_total_textview=0x7f05002c;
-        public static final int stats_list_layout=0x7f050031;
+        public static final int stats_list_layout=0x7f050032;
         public static final int stats_navigation_daily_button=0x7f05002e;
         public static final int stats_navigation_layout=0x7f05002d;
         public static final int stats_navigation_monthly_button=0x7f050030;
         public static final int stats_navigation_weekly_button=0x7f05002f;
-        public static final int stats_progressbar=0x7f050033;
+        public static final int stats_no_history_textview=0x7f050035;
+        public static final int stats_progressbar=0x7f050034;
+        public static final int stats_refresh_button=0x7f050031;
         public static final int status_view=0x7f05000e;
-        public static final int tabsImage=0x7f050036;
-        public static final int tabsLayout=0x7f050035;
-        public static final int tabsText=0x7f050037;
+        public static final int tabsImage=0x7f050038;
+        public static final int tabsLayout=0x7f050037;
+        public static final int tabsText=0x7f050039;
         public static final int viewfinder_view=0x7f05000b;
     }
     public static final class layout {
@@ -170,11 +172,13 @@ public final class R {
         public static final int stats_navigation_daily=0x7f06001d;
         public static final int stats_navigation_monthly=0x7f06001f;
         public static final int stats_navigation_weekly=0x7f06001e;
+        public static final int stats_no_history=0x7f060020;
+        public static final int stats_refresh=0x7f060021;
         public static final int stats_title_date=0x7f06001a;
         public static final int stats_title_scan=0x7f06001b;
         public static final int stats_title_total=0x7f06001c;
-        public static final int tabImage=0x7f060020;
-        public static final int tabText=0x7f060021;
+        public static final int tabImage=0x7f060022;
+        public static final int tabText=0x7f060023;
         public static final int txtBizIdHint=0x7f060009;
         public static final int txtBizPasswordHint=0x7f06000b;
         public static final int version_code=0x7f060005;
@@ -182,7 +186,7 @@ public final class R {
     public static final class style {
         public static final int ButtonText=0x7f070000;
         public static final int GenericProgressIndicator=0x7f070001;
-        public static final int Theme_TabTheme=0x7f07000f;
+        public static final int Theme_TabTheme=0x7f070010;
         public static final int login_textview=0x7f070002;
         public static final int pref_account_detail_body_textview=0x7f070005;
         public static final int pref_account_detail_caption_body_textview=0x7f070004;
@@ -192,9 +196,10 @@ public final class R {
         public static final int scan_no_of_scans_textview=0x7f070009;
         public static final int scan_number_textview=0x7f07000a;
         public static final int scan_welcome_textview=0x7f070008;
-        public static final int stats_listview_date_text=0x7f07000c;
-        public static final int stats_listview_scan_text=0x7f07000d;
-        public static final int stats_listview_total_text=0x7f07000e;
+        public static final int stats_listview_date_text=0x7f07000d;
+        public static final int stats_listview_scan_text=0x7f07000e;
+        public static final int stats_listview_total_text=0x7f07000f;
         public static final int stats_textview_header=0x7f07000b;
+        public static final int stats_textview_no_history=0x7f07000c;
     }
 }

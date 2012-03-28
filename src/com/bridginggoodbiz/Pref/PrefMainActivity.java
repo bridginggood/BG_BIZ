@@ -14,6 +14,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.bridginggoodbiz.Business;
 import com.bridginggoodbiz.BusinessStore;
 import com.bridginggoodbiz.LoginActivity;
 import com.bridginggoodbiz.R;
@@ -45,6 +46,7 @@ public class PrefMainActivity extends Activity{
 				.setCancelable(false)
 				.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 					public void onClick(final DialogInterface dialog, final int id) {
+						Business.init();
 						BusinessStore.clearSession(getParent());
 						//Start login activity
 						startActivity(new Intent().setClass(PrefMainActivity.this, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
